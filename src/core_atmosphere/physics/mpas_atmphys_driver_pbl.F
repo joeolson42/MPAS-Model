@@ -1346,10 +1346,6 @@
     case("bl_mynnedmf")
        call mpas_pool_get_config(configs,'config_mynn_cloudpdf'   ,bl_mynn_cloudpdf   )
        call mpas_pool_get_config(configs,'config_mynn_mixlength'  ,bl_mynn_mixlength  )
-       call mpas_pool_get_config(configs,'config_mynn_stfunc'     ,bl_mynn_stfunc     )
-       call mpas_pool_get_config(configs,'config_mynn_topdown'    ,bl_mynn_topdown    )
-       call mpas_pool_get_config(configs,'config_mynn_scaleaware' ,bl_mynn_scaleaware )
-       call mpas_pool_get_config(configs,'config_mynn_dheat_opt'  ,bl_mynn_dheat_opt  )
        call mpas_pool_get_config(configs,'config_mynn_edmf'       ,bl_mynn_edmf       )
        call mpas_pool_get_config(configs,'config_mynn_edmf_dd'    ,bl_mynn_edmf_dd    )
        call mpas_pool_get_config(configs,'config_mynn_edmf_mom'   ,bl_mynn_edmf_mom   )
@@ -1371,10 +1367,6 @@
 !      call mpas_log_write('--- enter subroutine mynn_bl_driver:')
 !      call mpas_log_write('--- config_mynn_cloudpdf    = $i',intArgs=(/bl_mynn_cloudpdf/))
 !      call mpas_log_write('--- config_mynn_mixlength   = $i',intArgs=(/bl_mynn_mixlength/))
-!      call mpas_log_write('--- config_mynn_stfunc      = $i',intArgs=(/bl_mynn_stfunc/))
-!      call mpas_log_write('--- config_mynn_topdown     = $i',intArgs=(/bl_mynn_topdown/))
-!      call mpas_log_write('--- config_mynn_scaleaware  = $i',intArgs=(/bl_mynn_scaleaware/))
-!      call mpas_log_write('--- config_mynn_dheat_opt   = $i',intArgs=(/bl_mynn_dheat_opt/))
 !      call mpas_log_write('--- config_mynn_edmf        = $i',intArgs=(/bl_mynn_edmf/))
 !      call mpas_log_write('--- config_mynn_edmf_dd     = $i',intArgs=(/bl_mynn_edmf_dd/))
 !      call mpas_log_write('--- config_mynn_edmf_mom    = $i',intArgs=(/bl_mynn_edmf_mom/))
@@ -1442,10 +1434,6 @@
                   bl_mynn_cloudpdf   = bl_mynn_cloudpdf    ,                                              &
                   bl_mynn_mixlength  = bl_mynn_mixlength   ,                                              &
                   bl_mynn_closure    = bl_mynn_closure     ,                                              &
-                  bl_mynn_stfunc     = bl_mynn_stfunc      ,                                              &
-                  bl_mynn_topdown    = bl_mynn_topdown     ,                                              &
-                  bl_mynn_scaleaware = bl_mynn_scaleaware  ,                                              &
-                  bl_mynn_dheat_opt  = bl_mynn_dheat_opt   ,                                              &
                   bl_mynn_edmf       = bl_mynn_edmf        ,                                              &
                   bl_mynn_edmf_dd    = bl_mynn_edmf_dd     ,                                              &
                   bl_mynn_edmf_mom   = bl_mynn_edmf_mom    ,                                              &
