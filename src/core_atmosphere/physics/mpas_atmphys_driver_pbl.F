@@ -1160,9 +1160,7 @@
                    bl_mynn_cloudmix,    &
                    bl_mynn_mixqt,       &
                    bl_mynn_ess,         &
-                   bl_mynn_tkebudget,   &
-                   icloud_bl,           &
-                   spp_pbl
+                   bl_mynn_tkebudget
 
  real(kind=RKIND),pointer:: bl_mynn_closure
 
@@ -1360,8 +1358,7 @@
        call mpas_pool_get_config(configs,'config_mynn_ess'        ,bl_mynn_ess        )
        call mpas_pool_get_config(configs,'config_mynn_tkeadvect'  ,bl_mynn_tkeadvect  )
        call mpas_pool_get_config(configs,'config_mynn_tkebudget'  ,bl_mynn_tkebudget  )
-       call mpas_pool_get_config(configs,'config_icloud_bl'       ,icloud_bl          )
-       call mpas_pool_get_config(configs,'config_spp_pbl'         ,spp_pbl            )
+!       call mpas_pool_get_config(configs,'config_spp_pbl'         ,spp_pbl            )
 
 !      call mpas_log_write(' ')
 !      call mpas_log_write('--- enter subroutine mynn_bl_driver:')
@@ -1396,7 +1393,7 @@
                   f_qc       = f_qc         , f_qi         = f_qi           , f_qs          = f_qs             , &
                   f_qoz      = f_qoz        , f_nc         = f_nc           , f_ni          = f_ni             , &
                   f_nifa     = f_nifa       , f_nwfa       = f_nwfa         , f_nbca        = f_nbca           , &
-                  icloud_bl  = icloud_bl    , delt         = dt_pbl         , dx            = dx_p             , &
+                  delt       = dt_pbl       , dx           = dx_p           ,                                    &
                   xland      = xland_p      , ps           = psfc_p         , ts            = tsk_p            , &
                   qsfc       = qsfc_p       , ust          = ust_p          , ch            = ch_p             , &
                   hfx        = hfx_p        , qfx          = qfx_p          ,                                    &

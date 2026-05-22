@@ -2568,11 +2568,6 @@
                      description="=0:use buoyancy-flux functions;= 1:use O-Gorman (2011)"
                      possible_values="0,1"/>
 
-                <nml_option name="config_icloud_bl" type="integer" default_value="1" in_defaults="false"
-                     units="-"
-                     description="configuration for MYNN subgrid cloud coupling to radiation"
-                     possible_values="`0: uncoupled',`1: coupled'"/>
-
                 <nml_option name="config_spp_pbl" type="integer" default_value="0" in_defaults="false"
                      units="-"
                      description="configuration for spp boundary layer"
