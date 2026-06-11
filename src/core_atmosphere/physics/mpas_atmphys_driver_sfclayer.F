@@ -357,6 +357,7 @@
     case("sf_mynnsfclay")
        if(allocated(snowh_p)) deallocate(snowh_p)
        if(allocated(ch_p)   ) deallocate(ch_p   )
+       if(allocated(cqs_p)  ) deallocate(cqs_p  )
        if(allocated(qcg_p)  ) deallocate(qcg_p  )
        if(config_frac_seaice) then
           if(allocated(ch_sea)) deallocate(ch_sea)
