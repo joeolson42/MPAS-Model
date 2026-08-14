@@ -2906,43 +2906,43 @@
 
                 <var name="edmf_a" type="real" dimensions="nVertLevels nCells Time" units="unitless"
                      description="EDMF relative updraft area of moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="edmf_w" type="real" dimensions="nVertLevels nCells Time" units="m s^{-1}"
                      description="EDMF vertical velocity of  moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="edmf_qt" type="real" dimensions="nVertLevels nCells Time" units="kg kg^{-1}"
                      description="EDMF total water mixing ratio in moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="edmf_qc" type="real" dimensions="nVertLevels nCells Time" units="kg kg^{-1}"
                      description="EDMF liquid water mixing ratio in moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="edmf_thl" type="real" dimensions="nVertLevels nCells Time" units="K"
                      description="EDMF liquid-ice water potential temperature in moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="edmf_ent" type="real" dimensions="nVertLevels nCells Time" units="m^{-1}"
                      description="EDMF entrainment rate in moist updrafts in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="sub_thl" type="real" dimensions="nVertLevels nCells Time" units="K s^{-1}"
                      description="EDMF subsidence of liquid-ice potential temperature in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="sub_qv" type="real" dimensions="nVertLevels nCells Time" units="kg kg^{-1} s^{-1}"
                      description="EDMF subsidence of water vapor mixing ratio in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="det_thl" type="real" dimensions="nVertLevels nCells Time" units="K s^{-1}"
                      description="EDMF detrainment of liquid-ice potential temperature in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
                 <var name="det_qv" type="real" dimensions="nVertLevels nCells Time" units="kg kg^{-1} s^{-1}"
                      description="EDMF detrainment of water vapor mixing ratio in the MYNN PBL scheme"
-                     packages="bl_mynn_in;bl_mynnedmf_tkebudget_in"/>
+                     packages="bl_mynn_in;bl_mynnedmf_output_in"/>
 
 		<var name="maxmf" type="real" dimensions="nCells Time" units="m s^{-1}"
                      description="Maximum mass flux in the each column"
