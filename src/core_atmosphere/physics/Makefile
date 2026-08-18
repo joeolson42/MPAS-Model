@@ -64,10 +64,10 @@ core_UGWP: core_physics_init
 	(cd physics_noaa/UGWP; $(MAKE) all)
 
 core_mynnedmf: core_physics_init
-	(cd physics_noaa/MYNN-EDMF; cp ./MPAS/Makefile .; cp ./MPAS/module_bl_mynnedmf_driver.F90 .; cp ./MPAS/module_bl_mynnedmf_common.F90 .; $(MAKE) all)
+	(cd physics_noaa/MYNN-EDMF; cp ./MPAS/Makefile .; cp ./MPAS/module_bl_mynnedmf_driver.F90 .; cp ./MPAS/module_bl_mynnedmf_common.F90 .; $(MAKE) all COREDEF="$(COREDEF)")
 
 core_mynnsfc: core_physics_init
-	(cd physics_noaa/MYNN-SFC; cp ./MPAS/Makefile .; cp ./MPAS/module_sf_mynnsfc_driver.F90 .; cp ./MPAS/module_sf_mynnsfc_common.F90 .; $(MAKE) all)
+	(cd physics_noaa/MYNN-SFC; cp ./MPAS/Makefile .; cp ./MPAS/module_sf_mynnsfc_driver.F90 .; cp ./MPAS/module_sf_mynnsfc_common.F90 .; $(MAKE) all COREDEF="$(COREDEF)")
 
 core_physics_wrf: core_physics_init core_physics_mmm core_UGWP core_mynnedmf
 	(cd physics_wrf; $(MAKE) all COREDEF="$(COREDEF)")
