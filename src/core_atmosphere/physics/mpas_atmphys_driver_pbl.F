@@ -1391,8 +1391,8 @@
        call mpas_timer_start('bl_mynnedmf')
        call mynnedmf_driver( &
                   f_qc       = f_qc         , f_qi         = f_qi           , f_qs          = f_qs             , &
-                  f_qoz      = f_qoz        , f_nc         = f_nc           , f_ni          = f_ni             , &
-                  f_nifa     = f_nifa       , f_nwfa       = f_nwfa         , f_nbca        = f_nbca           , &
+                  f_qoz      = f_qoz        , f_qnc        = f_nc           , f_qni         = f_ni             , &
+                  f_qnifa    = f_nifa       , f_qnwfa      = f_nwfa         , f_qnbca       = f_nbca           , &
                   delt       = dt_pbl       , dx           = dx_p           ,                                    &
                   xland      = xland_p      , ps           = psfc_p         , ts            = tsk_p            , &
                   qsfc       = qsfc_p       , ust          = ust_p          , ch            = ch_p             , &
@@ -1400,10 +1400,11 @@
                   wspd       = wspd_p       , znt          = znt_p          , uoce          = uoce_p           , &
                   voce       = voce_p       , dz           = dz_p           , u             = u_p              , &
                   v          = v_p          , w            = w_p            , th            = th_p             , &
-                  tt         = t_p          , p            = pres_p         , exner         = pi_p             , &
-                  rho        = rho_p        , qv           = qv_p           , qc            = qc_p             , &
-                  qi         = qi_p         , qs           = qs_p           , ni            = ni_p             , &
-                  nc         = nc_p         , nifa         = nifa_p         , nwfa          = nwfa_p           , &
+                  tk         = t_p          , p            = pres_p         , pint          = pres2_hyd_p      , &
+                  exner      = pi_p         , rho          = rho_p          ,                                    &
+                  qv         = qv_p         , qc           = qc_p           ,                                    &
+                  qi         = qi_p         , qs           = qs_p           , qni           = ni_p             , &
+                  qnc        = nc_p         , qnifa        = nifa_p         , qnwfa         = nwfa_p           , &
                   rthraten   = rthraten_p   , pblh         = hpbl_p         , kpbl          = kpbl_p           , &
                   cldfra_bl  = cldfrabl_p   , qc_bl        = qcbl_p         , qi_bl         = qibl_p           , &
                   maxwidth   = maxwidthbl_p , maxmf        = maxmfbl_p      , ztop_plume    = zbl_plume_p      , &
@@ -1414,8 +1415,8 @@
                   tsq        = tsq_p        , qsq          = qsq_p          , cov           = cov_p            , &
                   el_pbl     = elpbl_p      , rublten      = rublten_p      , rvblten       = rvblten_p        , &
                   rthblten   = rthblten_p   , rqvblten     = rqvblten_p     , rqcblten      = rqcblten_p       , &
-                  rqiblten   = rqiblten_p   , rqsblten     = rqsblten_p     , rniblten      = rniblten_p       , &
-                  rncblten   = rncblten_p   , rnwfablten   = rnwfablten_p   , rnifablten    = rnifablten_p     , &
+                  rqiblten   = rqiblten_p   , rqsblten     = rqsblten_p     , rqniblten     = rniblten_p       , &
+                  rqncblten  = rncblten_p   , rqnwfablten  = rnwfablten_p   , rqnifablten   = rnifablten_p     , &
                   edmf_a     = edmfa_p      , edmf_w       = edmfw_p        , edmf_qt       = edmfqt_p         , &
                   edmf_thl   = edmfthl_p    , edmf_ent     = edmfent_p      , edmf_qc       = edmfqc_p         , &
                   sub_thl    = subthl_p     , sub_sqv      = subqv_p        , det_thl       = detthl_p         , &
@@ -1423,11 +1424,11 @@
                   dqke       = dqke_p       , qwt          = qwt_p          , qshear        = qshear_p         , &
                   qbuoy      = qbuoy_p      , qdiss        = qdiss_p        , sh3d          = sh3d_p           , &
                   sm3d       = sm3d_p       , spp_pbl      = spp_pbl        , pattern_spp   = pattern_spp_pbl  , &
-                  do_restart         = config_do_restart   ,                                              &
-                  do_DAcycling       = config_do_DAcycling ,                                              &
+                  restart            = config_do_restart   ,                                              &
+                  cycling            = config_do_DAcycling ,                                              &
                   initflag           = initflag            ,                                              &
                   bl_mynn_tkeadvect  = bl_mynn_tkeadvect   ,                                              &
-                  bl_mynn_tkebudget  = bl_mynn_tkebudget   ,                                              &
+                  tke_budget         = bl_mynn_tkebudget   ,                                              &
                   bl_mynn_cloudpdf   = bl_mynn_cloudpdf    ,                                              &
                   bl_mynn_mixlength  = bl_mynn_mixlength   ,                                              &
                   bl_mynn_closure    = bl_mynn_closure     ,                                              &
